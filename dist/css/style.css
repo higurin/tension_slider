@@ -1,0 +1,131 @@
+/* css全体の設定 */
+body {
+  color: #404040;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  padding: 20px;
+  font-size: 15px;
+  letter-spacing: 2.5px;
+  font-weight: 500;
+  color: #000;
+}
+
+output {
+  font-size: 2em;
+  padding: .3em;
+}
+button{
+}
+
+.wrap {
+  /* height: 100%; */
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.button {
+  width: 140px;
+  height: 45px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  font-weight: 500;
+  color: #000;
+  background-color: #fff;
+  
+  border: none;
+  border-radius: 45px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+  outline: none;
+  }
+
+.button:hover {
+  background-color: #2EE59D;
+  box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
+  color: #fff;
+  transform: translateY(-7px);
+}
+
+input[type="text"],
+textarea {
+  outline: none;
+  border: 1px solid #aaa;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+input[type="text"]:focus,
+textarea:focus {
+  box-shadow: 0 0 7px #1abc9c;
+  border: 1px solid #1abc9c;
+}
+
+
+
+
+
+
+
+#output{text-align: center;}
+
+.content{
+  display: flex;
+  padding: 10px;
+}
+
+.content__box{
+  width: 50%;
+}
+
+.content__rule{
+  padding: 20px;
+  border: solid 1px #dcdcdc;
+}
+.content__musicName{
+  padding: 20px;
+}
+
+#countdown{
+  text-align: center;
+  margin: 0 auto;
+  color: #2EE59D;
+  font-size: 40px;
+}
+
+#countdown p{
+    -webkit-margin-before: 0px;
+    -webkit-margin-after: 0px;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+}
+
+
+
+#music_player{
+  width: 100%;
+
+}
+.evaluation{
+  padding: 20px;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  border: solid 1px #dcdcdc;
+
+}
+.evaluation__box{
+  margin-bottom: 10px;
+}
+
+
+#tension_slider{
+width: 100%;
+height: auto;
+float: left;
+}
+

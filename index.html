@@ -3,13 +3,109 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
+  <title>Musical Tension Slider</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="dist/css/normalize.min.css">
+  <link rel='stylesheet prefetch' href='dist/css/rangeslider.css'>
+  <link rel="stylesheet" href="dist/css/style.css">
+  <script src="dist/audiojs/audio.min.js"></script>
+  <script>
+    audiojs.events.ready(function() {
+      audiojs.createAll();
+    });
+  </script>
 </head>
 
 <body>
-  test
+  <article class="content">
+    <div class="content__box">
+      <div id="music_player">
+        <section class="content__rule">
+          <h2>実験の手順</h2>
+          <p>
+            Playボタンを押すとカウントダウンが始まり、５秒後に音楽が再生されます。
+            カウントダウンしている間に、スライダの値が２０になる位置にマウスポインタを置きます。
+          </p>
+          <p>
+            音楽が再生されたらスライダを上下に動かし始めます。
+            緊張感が増したらスライダを上げ、
+            反対に緊張感が減少したらスライダを下げてください。
+          </p>
+          <p>
+            曲が終わりましたら、名前・試行回数・回答の正確さを記入してください。
+
+          </p>
+        </section>
+        <p class="content__musicName">
+          <!-- 曲データ：
+          chpn-p1.mp3 -->
+        </p>
+        <div id="countdown"></div>
+        <div id="play_now"></div>
+        <div style="display:none;">
+          <audio id="sound-file" src="music/chpn-p1.mp3" preload="auto" />
+        </div>
+        <div class="wrap">
+          <button id="countdown_btn" class="button">PLAY MUSIC</button>
+        </div>
+      </div>
+      <!--music_player -->
+
+
+      <section class="evaluation">
+        <h2>記入欄</h2>
+        <form class="evaluation__box" name="form2">
+          <p>
+            被験者名:<input type="text" id="name" name="name" size="20" value="rika">
+          </p>
+        </form>
+        <form class="evaluation__box" name="form4">
+          <p>
+            何曲目:<input type="text" id="take" name="take" size="20" value="1">
+          </p>
+        </form>
+        <form class="evaluation__box" name="form3">試行回数:
+          <input type="radio" name="trial" value="1"> 1
+          <input type="radio" name="trial" value="2"> 2
+          <input type="radio" name="trial" value="3"> 3
+        </form>
+
+        <form class="evaluation__box" name="form1">回答の正確さ:
+          悪い
+          <input type="radio" name="evaluation" value="1"> 1
+          <input type="radio" name="evaluation" value="2"> 2
+          <input type="radio" name="evaluation" value="3"> 3
+          <input type="radio" name="evaluation" value="4"> 4
+          <input type="radio" name="evaluation" value="5"> 5
+          良い
+        </form>
+      </section>
+
+      <div class="wrap">
+        <button id="btn" class="button">download csv</button>
+      </div>
+    </div>
+
+    <div class="content__box">
+      <div id="tension_slider">
+        <!-- data-orientation="vertical"で垂直スライダに変更 -->
+        <input type="range" min="0" // default 0 max="100" // default 100 step="1" // default 1 value="20" // default min + (max-min)/2 data-orientation="vertical" // default horizontal>
+      </div>
+      <div id="output">
+        <output></output>
+      </div>
+    </div>
+
+  </article>
+
+
+
+  <!-- <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script> -->
+  <!-- <script src='https://cdnjs.cloudflare.com/ajax/libs/rangeslider.js/2.3.0/rangeslider.min.js'></script> -->
+  <script src='dist/js/jquery.min.js'></script>
+  <script src='dist/js/rangeslider.js'></script>
+  <script src="dist/js/index.js"></script>
+
 </body>
 
 </html>

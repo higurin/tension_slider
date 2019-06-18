@@ -1,0 +1,9 @@
+# gitでバージョン管理しないものを以下に記載
+node_modules/
+music/
+
+gulpfile.js
+package.json
+yarn.lock
+
+.DS_Store
